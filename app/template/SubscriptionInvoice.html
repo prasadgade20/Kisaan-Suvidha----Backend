@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Hey Surgical Subscription Invoice
+    </title>
+</head>
+
+<body>
+    <table style="max-width:1000px;width: 100%;margin: 0 auto;padding:0 0 15px 0;">
+        <tr>
+            <td>
+
+                <img src="#LOGO#" style="width: 170px;height: auto">
+
+            </td>
+            <td style="text-align: right;">
+                <h2 style="font-size: 20px;margin: 0;">Date:#DATE#
+                </h2>
+            </td>
+        </tr>
+    </table>
+    <table style="max-width:1000px;width: 100%;margin: 0 auto;padding:0 0 15px 0;">
+        <tr>
+            <td style="width:33.33%;">
+                <p style="font-size: 14px;padding: 5px;margin:0;">Billing</p>
+                <p style="font-size: 14px;font-weight: bold;padding: 5px;margin:0;">Name: #BILLFULLNAME#</p>
+
+                <p style="font-size: 14px;padding: 5px;margin:0;">Email: #BILLINGEMAIL#</p>
+
+            </td>
+
+            <td style="width:33.33%;">
+                <p style="font-size: 14px;font-weight: bold;padding: 5px;margin:0;">Transaction Id: #INVOICE#</p>
+                <p style="font-size: 14px;font-weight: bold;padding: 5px;margin:0;"></p>
+
+                <p style="font-size: 14px;font-weight: bold;padding: 5px;margin:0;">Payment Method: #PAYMENTTYPE#</p>
+
+                <p style="font-size: 14px;font-weight: bold;padding: 5px;margin:0;">Plan Status : #ORDERSTATUS#</p>
+                <p style="font-size: 14px;padding: 5px;margin:0;"></p>
+            </td>
+        </tr>
+    </table>
+    <table style="max-width:1000px;width: 100%;margin: 0 auto;padding: 15px 0;border-collapse: collapse;">
+        <tr>
+            <th
+                style="text-align: left;font-size: 14px;font-weight: bold;padding:10px 5px;border-bottom: 1px solid #ddd;background-color: #f5f5f5;border-top:1px solid #ddd;border-left:1px solid #ddd;">
+                No.</th>
+            <th
+                style="text-align: left;font-size: 14px;font-weight: bold;padding:10px 5px;border-bottom: 1px solid #ddd;background-color: #f5f5f5;border-top:1px solid #ddd;">
+                Plan Title</th>
+            <th
+                style="text-align: left;font-size: 14px;font-weight: bold;padding:10px 5px;border-bottom: 1px solid #ddd;background-color: #f5f5f5;border-top:1px solid #ddd;">
+                Plan Amount</th>
+            <th
+                style="text-align: left;font-size: 14px;font-weight: bold;padding:10px 5px;border-bottom: 1px solid #ddd;background-color: #f5f5f5;border-top:1px solid #ddd;border-right:1px solid #ddd;">
+                Date</th>
+            <th
+                style="text-align: left;font-size: 14px;font-weight: bold;padding:10px 5px;border-bottom: 1px solid #ddd;background-color: #f5f5f5;border-top:1px solid #ddd;border-right:1px solid #ddd;">
+                Total</th>
+        </tr>
+        <tr>
+            #CONTENT#
+        </tr>
+
+    </table>
+    <table style="max-width:1000px;width: 100%;margin: 0 auto;padding:0 0 15px 0;border-collapse: collapse;">
+        <tr>
+            <td>
+                <table style="width: 50%;border-collapse: collapse;margin-left: auto;">
+                    <tr>
+
+                        <td
+                            style="text-align: left;    font-size: 14px;font-weight: bold;padding:10px 5px;border-bottom: 1px solid #ddd;">
+                            Total:</td>
+                        <td style="text-align: left;font-size: 14px;padding:10px 5px;border-bottom: 1px solid #ddd;">$
+                            #TOTAL#
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
