@@ -1,9 +1,10 @@
-const {Sequelize} = require("sequelize");
+const { Sequelize } = require("sequelize");
 const db = require("./index.js");
-const {Op,QueryTypes} = require("sequelize");
+const { Op, QueryTypes } = require("sequelize");
 
 const Products = db.define(
-  "product", {
+  "product",
+  {
     iProductId: {
       type: Sequelize.INTEGER,
       primaryKey: true,
@@ -26,11 +27,11 @@ const Products = db.define(
     },
     eType: {
       type: Sequelize.ENUM,
-      values: ['largeTools', 'Tractorattachments', 'smallTools', 'lands']
+      values: ["largeTools", "Tractorattachments", "smallTools", "lands"],
     },
     eSold: {
       type: Sequelize.ENUM,
-      values: ['Rented', 'UnRented']
+      values: ["Rented", "UnRented"],
     },
     vImage: {
       type: Sequelize.STRING,
@@ -41,7 +42,32 @@ const Products = db.define(
     dtUpdatedDate: {
       type: Sequelize.DATE,
     },
-  }, {
+    manufacturer: {
+      type: Sequelize.STRING,
+    },
+    availableDuration: {
+      type: Sequelize.DATE,
+    },
+    ageOfEquipment: {
+      type: Sequelize.INTEGER,
+    },
+    area: {
+      type: Sequelize.STRING,
+    },
+    soilType: {
+      type: Sequelize.STRING,
+    },
+    waterSupply: {
+      type: Sequelize.BOOLEAN,
+    },
+    electricitySupply: {
+      type: Sequelize.BOOLEAN,
+    },
+    availability: {
+      type: Sequelize.INTEGER,
+    },
+  },
+  {
     createdAt: false,
     updatedAt: false,
     freezeTableName: true,
@@ -51,18 +77,16 @@ const Products = db.define(
 Products.getAllProducts = (req) => {
   var where = {};
   if (req.body.iUserId) {
-    where.iUserId = req.body.iUserId
+    where.iUserId = req.body.iUserId;
   }
-  
+
   if (req.body.iProductId) {
-    where.iProductId = req.body.iProductId
+    where.iProductId = req.body.iProductId;
   }
-
-
 
   return Products.findAll({
     where,
-    order : [["iProductId","desc"]]
+    order: [["iProductId", "desc"]],
   });
 };
 
@@ -185,7 +209,6 @@ Products.getAllProducts = (req) => {
 //   });
 // };
 
-
 // Users.getMetaInformationById = (req) => {
 //   var where = {};
 
@@ -199,9 +222,7 @@ Products.getAllProducts = (req) => {
 //   });
 // };
 
-
-
-// 
+//
 
 // Users.hasMany(UserEducationModel, {
 //   foreignKey: "iUserId",
